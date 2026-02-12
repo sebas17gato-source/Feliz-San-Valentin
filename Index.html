@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Mi Pinguinita 💖</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', cursive;
+    background: linear-gradient(135deg,#ff9ad5,#b388ff);
+    overflow-x:hidden;
+    text-align:center;
+    color:white;
+}
+
+/* ANIMACIÓN FLOTANTE */
+@keyframes flotar{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+    100%{transform:translateY(0);}
+}
+
+/* CORAZONES FLOTANDO */
+.corazon{
+    position:fixed;
+    color:#ff4081;
+    animation: flotar 4s infinite ease-in-out;
+    font-size:30px;
+}
+
+h1{
+    font-size:80px;
+    margin-top:60px;
+    text-shadow:0 0 20px #ff80ab;
+}
+
+h2{
+    font-size:40px;
+    margin-top:-20px;
+    color:#ffe4f2;
+}
+
+/* CARTA */
+.carta{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    width:70%;
+    margin:40px auto;
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 0 40px rgba(0,0,0,0.3);
+    transition:0.5s;
+}
+
+.carta:hover{
+    transform:scale(1.05);
+}
+
+/* BOTÓN */
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    font-size:20px;
+    background:#ff4081;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff80ab;
+    transform:scale(1.1);
+}
+
+/* MENSAJE OCULTO */
+#mensaje{
+    display:none;
+    margin-top:30px;
+    font-size:22px;
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer{
+    from{opacity:0; transform:scale(0.5);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* GIFS DECORATIVOS */
+.decoracion{
+    position:fixed;
+    width:120px;
+    animation: flotar 6s infinite ease-in-out;
+}
+
+.snoopy{
+    bottom:10px;
+    left:20px;
+}
+
+.pinguino{
+    bottom:10px;
+    right:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- CORAZONES -->
+<div class="corazon" style="top:10%; left:20%;">💖</div>
+<div class="corazon" style="top:30%; left:80%;">💜</div>
+<div class="corazon" style="top:60%; left:10%;">💘</div>
+
+<h1>HEIDI</h1>
+<h2>Mi Pinguinita 🐧💜</h2>
+
+<div class="carta">
+    <p>
+        El dia que llegaste a mi vida fue el mas feliz de toda mi exitencia
+        y pues no supe apreciar el tesoro que tenia hasta que te perdí.
+            Para mi fuiste una parte fundamental de mi vida,
+            literalmente fuiste mi primer amor y pues nunca olvidare todo lo que pasamos juntos
+    </p>
+
+    <p>
+        Sé que tecnicamente ya no somos enamorados y tal vez ahora ya ni me consideres tu
+        amigo pero creo que ya deje claro que mis sentimientos por ti nunca van a cambiar
+        y quiero que sepas que pase lo que pase siempre vas a ser mi 🐧💖
+    </p>
+
+    <button onclick="mostrarMensaje()">Haz click aquí 💌</button>
+
+    <div id="mensaje">
+        💕 Eres el amor más hermoso que he podido desear.  
+        Acepto y nunca negare que fue mi error y toda la vida me arrepentire de lo que te hice
+        y si no vuelvo a intentarlo es porque no quiero verte mal y odiaría ver a la persona que amo
+        triste otra vez por mi culpa; entiendo que ya nunca podremos ser lo que fuimos alguna vez
+        pero si eso es lo mejor para ti lo acepto 💕<p>
+            Te amo Heidi Damaris Campuzano Espinoza y nunca lo dejaré de hacer.
+    </div>
+</div>
+
+<!-- GIFS DECORATIVOS -->
+<img class="decoracion snoopy"
+src="IMG1.jpg">
+
+<img class="decoracion pinguino"
+src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamdjcDFwbXZjcnY1OXJwZmtsbjZleWh5eXA3MzdtY2hmaG9odXI5eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7k3ThwwMXnHCE/giphy.gif">
+
+<script>
+function mostrarMensaje(){
+    document.getElementById("mensaje").style.display="block";
+}
+</script>
+
+</body>
+</html>
